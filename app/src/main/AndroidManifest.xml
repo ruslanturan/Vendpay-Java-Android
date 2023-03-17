@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.UserAcademy.paytovending">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ActivityPolicyHome"
+            android:parentActivityName=".ActivityHome"></activity>
+        <activity android:name=".ActivityTermsHome"
+            android:parentActivityName=".ActivityHome"/>
+        <activity
+            android:name=".ActivityPolicy"
+            android:parentActivityName=".ActivityFirst" />
+        <activity
+            android:name=".ActivityTerms"
+            android:parentActivityName=".ActivityFirst" />
+        <activity android:name=".ActivityAmountQR" />
+        <activity
+            android:name=".ActivityEditPassword"
+            android:parentActivityName=".ActivityAccountInfo" />
+        <activity
+            android:name=".ActivityEditPhone"
+            android:parentActivityName=".ActivityAccountInfo" />
+        <activity
+            android:name=".ActivityEditMail"
+            android:parentActivityName=".ActivityAccountInfo" />
+        <activity
+            android:name=".ActivityAccountInfo"
+            android:parentActivityName=".ActivityHome" />
+        <activity android:name=".ActivityVerifyPhone" />
+        <activity
+            android:name=".ActivityTransactions"
+            android:parentActivityName=".ActivityHome" />
+        <activity
+            android:name=".ActivityContactFirst"
+            android:parentActivityName=".ActivityFirst" />
+        <activity android:name=".ActivityPayment" />
+        <activity android:name=".ActivityLanguage" />
+        <activity
+            android:name=".ActivityContactHome"
+            android:parentActivityName=".ActivityHome" />
+        <activity
+            android:name=".ActivityForgotPassword"
+            android:parentActivityName=".ActivityLogin" />
+        <activity
+            android:name=".ActivityReceiveMoney"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivitySendMoney"
+            android:parentActivityName=".ActivityTransferMoney"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityTransferMoney"
+            android:parentActivityName=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAddBalance"
+            android:parentActivityName=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAddBalanceWithCard"
+            android:parentActivityName=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityMoney2Device"
+            android:parentActivityName=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityReadQR"
+            android:parentActivityName=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityRegister"
+            android:parentActivityName=".ActivityFirst"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityLogin"
+            android:parentActivityName=".ActivityFirst"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityFirst"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ActivityLaunch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

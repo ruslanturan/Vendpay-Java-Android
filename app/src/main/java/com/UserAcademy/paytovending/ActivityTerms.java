@@ -1,0 +1,35 @@
+package com.UserAcademy.paytovending;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+
+public class ActivityTerms extends AppCompatActivity {
+    public static Context context;
+    public static WebView myWebView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_terms);
+        context = this;
+        getSupportActionBar().setTitle(R.string.n);
+
+        myWebView = (WebView) findViewById(R.id.termsWebView);
+        SharedPreferences shp = getSharedPreferences(
+                "com.UserAcademy.paytovending.PREFERENCES",Context.MODE_PRIVATE);
+        String language = shp.getString("My_Lang","");
+        if(language.contains("ab")){
+            myWebView.loadUrl("https://vendpay.ge/login/terms/lang=ka");
+        }
+        else{
+            myWebView.loadUrl("https://vendpay.ge/login/terms/lang=en");
+        }
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        myWebView.getSettings().setDomStorageEnabled(true);
+    }
+}
