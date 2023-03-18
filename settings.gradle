@@ -1,2 +1,0 @@
-rootProject.name='PayToVending'
-include ':app', ':jsoup-1.13.1'
